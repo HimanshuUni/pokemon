@@ -1,0 +1,58 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: cadetblue;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 -3px 5px 6px rgb(95 158 160 / 60%);
+}
+.nav-right {
+    display: flex;
+}
+
+ul{
+    overflow-y: auto;
+    width: 180px;
+    height: 200px;
+    background-color: white;
+    color: black;
+}
+
+input{
+    padding: 7px 11px;
+    width: 72%;
+    border: none;
+    outline: none;
+    font-size: 19px;
+}
+
+input::-webkit-calendar-picker-indicator {
+    width: 0;
+    opacity: 0;
+}
+input:focus{
+    box-shadow: inset 0 0px 5px cadetblue;
+}
+
+nav p{
+    font-size: 30px;
+}
+option{
+    padding: 9px;
+    font-size: 20px;
+}
+
+select{
+    padding: 7px 9px;
+    margin-right: 57px;
+    margin-left: -68px;
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 17px;
+
+}

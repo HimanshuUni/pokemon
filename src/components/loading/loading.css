@@ -1,0 +1,16 @@
+.loading {
+  width: 99.3vw;
+  height: 100vh;
+  position: relative;
+}
+.loading span {
+  padding: 30px;
+  font-size: 99px;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
