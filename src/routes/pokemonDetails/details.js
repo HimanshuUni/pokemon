@@ -1,22 +1,15 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { getDetails } from "../../api/api";
 import { Error } from "../../components/errorPage/error";
+import useFetch from "../../Hooks/useFetch";
 import "./details.css";
 
 const PokemonDetails = () => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState("");
   const { pokemon } = useParams();
 
-  useEffect(() => {
-    getDetails(pokemon)
-      .then((d) => setData(d))
-      .catch(() => {
-        setError("404 Not Found");
-      });
-  }, [pokemon]);
-
+  // fetching data
+  const {data, error} = useFetch(
+    `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+  );
 
   return error ? (
     <Error error={error} />

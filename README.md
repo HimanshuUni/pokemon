@@ -84,3 +84,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
       //   .finally(() => {
       //     setLoading(false);
       //   });
+
+
+       // Setting pokemon
+         // const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+import { fetchPokemon } from "./api/api";
+  const [pokemons, setPokemons] = useState([]); // original pokemon
+
+  useEffect(() => {
+    const load = () => {
+      setLoading(true);
+      fetchPokemon(offset)
+        .then((res) => {
+          setPokemons((pokemons) => [...pokemons, ...res.results]);
+          setError("");
+        })
+        .catch(() => {
+          setError("404 Not Found");
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    };
+    load();
+  }, [offset]);

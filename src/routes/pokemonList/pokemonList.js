@@ -13,8 +13,7 @@ const PokemonList = ({
   handleSelect,
   name,
   search,
-  loadPokemon,
-  select
+  loadPokemon
 }) => {
   return (
     <>

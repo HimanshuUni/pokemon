@@ -1,7 +1,7 @@
 export const Error = ({error}) => {
     return (
         <div className="loading">
-          <span>{error}</span>
+          <span className="middle">{error}</span>
         </div>
     )
 }
