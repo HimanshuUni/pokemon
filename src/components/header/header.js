@@ -9,7 +9,7 @@ export const Header = ({ handleChange,handleSelect,name,search }) => {
             <nav>
                 <Link to="/" style={{textDecoration:'none', color:"white"}}> <p>List of Pokemons</p></Link>
                 <div className='nav-right'>
-                <div>
+                <div style={{width: '286px'}}>
                     <input type='search' list='option' placeholder='Search Pokemon' onChange={handleChange} />
                     {
                         search ? <datalist id='option'>{list}</datalist> : ''
